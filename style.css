@@ -1,0 +1,132 @@
+body {
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow-x: hidden;
+    background: url('IMG-20260625-WA0084.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.dark-overlay {
+    position: fixed;
+    top: O;
+    left: O;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.75), rgba(20, 10, 15, 0.7));
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 10;
+    width: 90%;
+    max-width: 650px;
+}
+
+.card {
+    background: rgba(15, 15, 15, 0.65);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 30px 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 92%;
+        margin: 20px auto;
+    }
+
+    .title {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .letter-content {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .letter-content img {
+        width: 120px !important;
+        height: 120px !important;
+    }
+}
+
+.title {
+    font-family: 'Dacing Script', cursive;
+    font-size: 2.8rem;
+    color: #ff4d6d;
+}
+
+.btn-reveal {
+    background: linear-gradient(45deg, rgba(255, 77, 109, 0.5), #ff4d6d);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(255, 77, 109, 0.4);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY();
+    transition: all 1.5s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    pointer-events: none;
+
+}
+
+.heart-float {
+    position: absolute;
+    will-change: transform, opacity;
+    animation: floatUp linear forwards;
+    bottom: -50px;
+    color: #ff4d6d;
+    text-shadow: 0 0 5px rgba(255, 77, 109, 0.5);
+    z-index: 2;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(5vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-50vh) rotate(360deg);
+        opacity: 0;
+    }
+}

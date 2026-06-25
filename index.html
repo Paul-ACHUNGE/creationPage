@@ -65,6 +65,9 @@
                 console.log("Erreur de lecture", error)
             })
         }
+        document.body.addEventListener('click', () => {
+            music.play();
+        }, { once: true })
 
         document.getElementById('intro-section').style.display = 'none';
         const letter = document.getElementById('letter-text');
